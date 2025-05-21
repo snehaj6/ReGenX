@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --green: #76c043;
+  --green-hover: #64a539;
+  --heading-font: "Trirong", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  list-style-type: none;
+}
+
+section,
+footer {
+  overflow-x: hidden;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about-hero {
+  position: relative;
+  height: 400px;
+  background-image: url("../Images/causes_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero h3 {
+  font-size: 2.4rem;
+  font-family: var(--heading-font);
+  color: white;
+  margin: 0;
+}
+
+.feedback-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 700px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section-title{
+    margin-bottom: 40px;
+}
+
+.section-title h2{
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 3px;
+  font-size: 27px;
+}
+
+.container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.icon {
+  padding: 10px;
+  background-color: var(--green); /* Green background */
+  color: #fff;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid var(--green);
+}
+
+label {
+  display: none; 
+}
+
+.line {
+  margin: 60px 0;
+  width: 100%;
+  background-color: #aea9a9;
+  height: 0.1rem;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.question label {
+  display: block;
+  color: #666;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.question select {
+  margin-bottom: 20px;
+}
+
+.question input[type="radio"] {
+  margin-right: 5px; /* Space between radio button and label */
+}
+
+.radio-group {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+}
+
+.submit-btn {
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-top: 40px;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--green-hover);
+}
+
+/* Error message styling */
+.error-message {
+  display: none;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.return-home-btn {
+  background-color: var(--green); /* Green background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+.return-home-btn:hover {
+  background-color: var(--green-hover); /* Darker green on hover */
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+  .section-title h2{
+    font-size: 20px;
+  }
+}

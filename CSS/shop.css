@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --green: #76c043;
+  --green-hover: #64a539;
+  --heading-font: "Trirong", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  list-style-type: none;
+}
+
+section,
+footer {
+  overflow-x: hidden;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about-hero {
+  position: relative;
+  height: 400px;
+  background-image: url("../Images/causes_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero h3 {
+  font-size: 2.4rem;
+  font-family: var(--heading-font);
+  color: white;
+  margin: 0;
+}
+
+.section-title h2 {
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+}
+
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.carousel-btn {
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  width: 25%;
+  text-align: left;
+  position: relative;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.sale-badge,
+.sold-out-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.sold-out-badge {
+  background-color: #666;
+}
+
+.product-title {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.rating {
+  color: #ffd700;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 5px;
+}
+
+/* Grid layout for collection items */
+.collection-grid {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styling for each collection item */
+.collection-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Overlay effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.overlay h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.shop-now {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now:hover {
+  background-color: #45a049;
+}
+
+/* Hover effect to darken the overlay */
+.collection-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .all-collection h2 {
+    font-size: 1.5em;
+  }
+
+  .overlay h3 {
+    font-size: 1.2em;
+  }
+
+  .shop-now {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}

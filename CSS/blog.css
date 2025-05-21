@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --green: #76c043;
+  --green-hover: #64a539;
+  --heading-font: "Trirong", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  list-style-type: none;
+}
+section, footer {
+  overflow-x: hidden;
+} 
+
+body {
+  height: 100vh;
+}
+
+header {
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Hero section */
+.about-hero {
+  position: relative;
+  height: 400px;
+  background-image: url("../Images/causes_bg.jpg"); /* Background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero h3 {
+  font-size: 2.4rem;
+  font-family: var(--heading-font);
+  color: white;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  padding: 100px 0px;
+  max-width: 1200px;
+  margin: auto;
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  .container{
+    flex-direction: column;
+  }
+}
+
+/* Main Content */
+main {
+  flex: 70%;
+  padding: 0 2rem;
+}
+
+h2,
+h1,
+h3,
+p,
+img,
+ul,
+li {
+  text-align: left;
+}
+
+article {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+  text-transform: uppercase;
+  line-height: 2rem;
+  font-family: var(--heading-font);
+  color: var(--green);
+  font-size: 1.8rem;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Full width line */
+  height: 3.3px;
+  background-color: #e0e0e0; /* Grey line */
+  margin-top: 2px;
+}
+
+.green-line {
+  width: 40px;
+  height: 100%;
+  background-color: var(--green);
+}
+
+.grey-line {
+  flex: 1;
+}
+
+article h3 {
+  color: #333;
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #777;
+  display: flex;
+  gap: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--green);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.read-more:hover {
+  background: var(--green-hover);
+}
+
+/* Aside Styles */
+aside {
+  flex: 30%;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.aside-div {
+  background: #f4f4f4;
+  padding: 40px 20px;
+  margin-bottom: 18px;
+}
+
+.aside-div h3 {
+  color: #5c5c5c;
+  font-size: 22px;
+  font-family: var(--heading-font);
+}
+
+.green{
+  color: var(--green);
+}
+.aside-div ul {
+  padding: 0;
+}
+
+.aside-div ul li {
+  margin: 0.9rem 0;
+  font-size: 0.9rem;
+}
+
+.aside-div ul li a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+.aside-div ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Links */
+
+.social-media a {
+  margin-top: 0.9rem;
+  display: block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--green);
+  text-align: left;
+  transition: color 0.3s;
+}
+
+.social-media a i {
+  background: var(--green);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.social-media a i:hover {
+  border: 2px solid #fff;
+  color: var(--green);
+  background-color: transparent;
+}
